@@ -1,5 +1,11 @@
 # [rickastley.live](rickastley.live)
-![image](https://user-images.githubusercontent.com/14297772/112696868-660e8200-8e65-11eb-88d5-cf046e4f2978.png)
+
 
 ```
 $ curl rickastley.live
+```
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/14297772/112697068-a241e280-8e65-11eb-93f5-e26c17e484ef.png">
+</div>
+
