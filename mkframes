@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir -p frames 
+cd frames
+ffmpeg -i ../rickastley.mp4 thumb%04d.png -hide_banner
+for i in *.png; do jp2a --height=30 --colors $i >> frames.txt; done
