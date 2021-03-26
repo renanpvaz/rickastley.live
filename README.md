@@ -14,4 +14,5 @@ $ curl rickastley.live
 $ ./mkframes # generate the ascii art
 $ stack build
 $ stack run rickastley-exe
+# Setting phasers to stun... (port 3000) (ctrl-c to quit)
 ```
