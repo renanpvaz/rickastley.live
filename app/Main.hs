@@ -8,6 +8,7 @@ import qualified Data.ByteString.Lazy.Char8 as C
 import Data.List.Split as S
 import Data.Text.Lazy as TL
 import Network.Wai
+import System.Environment
 import System.IO
 import Web.Scotty
 
@@ -27,11 +28,11 @@ streaming write flush = do
   loop $ S.chunksOf frameSize $ C.lines contents
 
 main :: IO ()
-main =
-  port <- liftM read $ getEnv "PORT"
-  scotty 3000 $
-  get "/" $ do
-    ua <- header "user-agent"
-    case fmap (TL.isInfixOf "curl") ua of
-      Just True -> stream streaming
-      _ -> redirect "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+main = do
+  port <- read <$> getEnv "PORT"
+  scotty port $ do
+    get "/" $ do
+      ua <- header "user-agent"
+      case fmap (TL.isInfixOf "curl") ua of
+        Just True -> stream streaming
+        _ -> redirect "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
