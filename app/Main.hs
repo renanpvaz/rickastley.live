@@ -28,6 +28,7 @@ streaming write flush = do
 
 main :: IO ()
 main =
+  port <- liftM read $ getEnv "PORT"
   scotty 3000 $
   get "/" $ do
     ua <- header "user-agent"
