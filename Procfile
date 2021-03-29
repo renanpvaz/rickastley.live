@@ -1,1 +1,0 @@
-web: rickastley-exe
