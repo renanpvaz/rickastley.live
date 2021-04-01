@@ -12,10 +12,9 @@ import System.Environment
 import System.IO
 import Web.Scotty
 
-frameSize = 30
-
 streaming :: StreamingBody
 streaming write flush = do
+  frameSize <- read <$> getEnv "FRAME_SIZE"
   h <- openFile "frames/frames.txt" ReadMode
   contents <- C.hGetContents h
   let loop (frame:frames) = do
