@@ -18,4 +18,5 @@ $ PORT=3000 FRAME_SIZE=30 stack run rickastley-exe
 ```
 <br>
 <br>
+
 Inspired by [parrot.live](https://github.com/hugomd/parrot.live).
