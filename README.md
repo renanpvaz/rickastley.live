@@ -17,7 +17,6 @@ $ PORT=3000 FRAME_SIZE=30 stack run rickastley-exe
 # Setting phasers to stun... (port 3000) (ctrl-c to quit)
 ```
 <br>
-<br>
 <hr>
 
 Inspired by [parrot.live](https://github.com/hugomd/parrot.live).
