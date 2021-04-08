@@ -1,4 +1,4 @@
-# [rickastley.live](https://rickastley.live)
+# [rickastley.live](http://rickastley.live)
 
 It's exactly what you think it is:
 
